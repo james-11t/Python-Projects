@@ -1,0 +1,34 @@
+import math
+print ('Here is the quadratic formula')
+print ('''
+-b +- √b² - (4 x a x c)
+-------------------------
+         2a
+  
+  ''')
+
+def quadraticFormula(a,b,c):
+  aValue = 2 * a
+  bValue = b*b
+  bracketValue =  4 * a * c
+  valueofsqrt = math.sqrt(bValue - bracketValue)
+  minusb = -1 * b 
+  x1 = minusb + valueofsqrt
+  totalx1 = x1/aValue
+  minusb2 = -1 * b 
+  x2 = minusb2 - valueofsqrt
+  totalx2 = x2/aValue
+  total1 = (round(totalx1,2))
+  total2 = (round(totalx2,2))
+  if bValue < bracketValue:
+    print ('Math error')
+  else:
+    print ('Here are the solutions to 2dp')
+    print ('x1 = {value1}'.format(value1 = total1))
+    print ('x2 = {value2}'.format(value2 = total2))
+    return valueofsqrt
+
+aInput = int(input('What\'s your \'a\' value'))
+bInput = int(input('What\'s your \'b\' value'))
+cInput = int(input('What\'s your \'c\' value'))
+solution = quadraticFormula(aInput,bInput,cInput)
