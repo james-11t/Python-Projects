@@ -28,7 +28,10 @@ def quadraticFormula(a,b,c):
     print ('x2 = {value2}'.format(value2 = total2))
     return valueofsqrt
 
-aInput = int(input('What\'s your \'a\' value'))
-bInput = int(input('What\'s your \'b\' value'))
-cInput = int(input('What\'s your \'c\' value'))
-solution = quadraticFormula(aInput,bInput,cInput)
+try:
+  aInput = int(input('What\'s your \'a\' value'))
+  bInput = int(input('What\'s your \'b\' value'))
+  cInput = int(input('What\'s your \'c\' value'))
+  solution = quadraticFormula(aInput,bInput,cInput)
+except:
+  print ('Not a number')
