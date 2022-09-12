@@ -1,0 +1,30 @@
+import random
+import time
+print (''' Name Generator Simulator v2.3
+******************************************
+        ''')
+playAgain = True
+while playAgain == True:
+    firstName = ['James','Phil','Aaron','Tiffany','Sean','Charlotte','Nina','Ben','Ryan']
+    lastName = ['Brown','Smith','Ahmed','Khan','Djeumou','James','Banks','Richmond']
+    print ('Generating name')
+    for i in range(1,6):
+        print('.',end = '.')
+        time.sleep(1)
+    time.sleep(2)
+    userFirstname = random.choice(firstName)
+    userLastname = random.choice(lastName)
+    valid = False
+    print('')
+    print ('Your generated name is {first} {last}'.format(first = userFirstname, last = userLastname))
+    while valid == False:
+        choice = input ('Do you want to generate another name (Y/N) ')
+        if choice.upper() ==  'N':
+            playAgain = False
+            valid = True
+        elif choice.upper() != 'Y' and choice.upper() != 'N':
+            print ('Invalid input')
+        else:
+            valid = True
+
+        
