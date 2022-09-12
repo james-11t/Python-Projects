@@ -1,0 +1,351 @@
+#imports
+import time
+import random
+
+#functions
+def loading():
+    for i in range(1,15):
+        print (".",end="")
+        time.sleep(0.2)
+
+#This is the intro and you press enter to continue
+def start():
+    print ('FIFA 2022 Qatar World Cup')
+    print ('**************************')
+    print ('Press enter to continue')
+    input ('')
+    loading()
+
+def maincode():
+    # Here I put 32 nations in the list, all these teams are split up into 4 groups so there are 8 groups in total
+    nations = ['Portugal','Serbia','Republic of Ireland','Spain','Sweden','Greece','Italy','Switzerland','Northern Ireland','Bulgaria','Lithuania','France','Ukraine','Finland','Bosnia and Herzegovina','Belgium','Wales','Denmark','Austria','Scotland','Netherlands','Turkey','Norway','Croatia','Russia','England','Poland','Germany','Romania','Andorra','San Marino','Gibraltar']
+    groupa = []
+    groupb = []
+    groupc = []
+    groupd = []
+    groupe = []
+    groupf = []
+    groupg = []
+    grouph = []
+    # I used a for loop so it chooses 4 random teams for each group
+    for i in range(1,5):
+        firstteam = random.choice(nations)
+        groupa.append(firstteam)
+        nations.remove(firstteam)
+    for i in range(1,5):
+        firstteam = random.choice(nations)
+        groupb.append(firstteam)
+        nations.remove(firstteam)
+    for i in range(1,5):
+        firstteam = random.choice(nations)
+        groupc.append(firstteam)
+        nations.remove(firstteam)
+    for i in range(1,5):
+        firstteam = random.choice(nations)
+        groupd.append(firstteam)
+        nations.remove(firstteam)
+    for i in range(1,5):
+        firstteam = random.choice(nations)
+        groupe.append(firstteam)
+        nations.remove(firstteam)
+    for i in range(1,5):
+        firstteam = random.choice(nations)
+        groupf.append(firstteam)
+        nations.remove(firstteam)
+    for i in range(1,5):
+        firstteam = random.choice(nations)
+        groupg.append(firstteam)
+        nations.remove(firstteam)
+    for i in range(1,5):
+        firstteam = random.choice(nations)
+        grouph.append(firstteam)
+        nations.remove(firstteam)
+    print ('')
+    print ('Group A')
+    print (groupa[0])
+    print (groupa[1])
+    print (groupa[2])
+    print (groupa[3])
+###################################
+    print('')
+    print ('Group B')
+    print (groupb[0])
+    print (groupb[1])
+    print (groupb[2])
+    print (groupb[3])
+###################################
+    print('')
+    print ('Group C')
+    print (groupc[0])
+    print (groupc[1])
+    print (groupc[2])
+    print (groupc[3])
+###################################
+    print('')
+    print ('Group D')
+    print (groupd[0])
+    print (groupd[1])
+    print (groupd[2])
+    print (groupd[3])
+###################################
+    print ('')
+    print ('Group E')
+    print (groupe[0])
+    print (groupe[1])
+    print (groupe[2])
+    print (groupe[3])
+###################################
+    print('')
+    print ('Group F')
+    print (groupf[0])
+    print (groupf[1])
+    print (groupf[2])
+    print (groupf[3])
+###################################
+    print('')
+    print ('Group G')
+    print (groupg[0])
+    print (groupg[1])
+    print (groupg[2])
+    print (groupg[3])
+###################################
+    print('')
+    print ('Group H')
+    print (grouph[0])
+    print (grouph[1])
+    print (grouph[2])
+    print (grouph[3])
+    print ('')
+    print ('Press enter to continue')
+    input('')
+   
+    #here are the lists that i made so that things can be added to them while the tournament is going on
+    knockouts = []
+    fixtures = []
+    quarterfinal = []
+    roundof16match = []
+    quarterfinalmatch = []
+    semifinalmatch = []
+    semifinal = []
+    final = []
+    finalmatch = []
+    print ('Simulating group stage')
+    #I made a loading animation so it looks like its calculating the results and who went through from each group
+    loading()
+    team1fromgroup = random.choice(groupa)
+    groupa.remove(team1fromgroup)
+    knockouts.append(team1fromgroup)
+    team2fromgroup = random.choice(groupa)
+    groupa.remove(team2fromgroup)
+    knockouts.append(team2fromgroup)
+    print ('')
+    print (('From Group A, ') + (team1fromgroup) + ' and ' + (team2fromgroup) + (' have qualified for the round of 16'))
+    print ('')
+    team1fromgroup = random.choice(groupb)
+    groupb.remove(team1fromgroup)
+    knockouts.append(team1fromgroup)
+    team2fromgroup = random.choice(groupb)
+    groupb.remove(team2fromgroup)
+    knockouts.append(team2fromgroup)
+    print ('')
+    print (('From Group B, ') + (team1fromgroup) + ' and ' + (team2fromgroup) + (' have qualified for the round of 16'))
+    print ('')
+    team1fromgroup = random.choice(groupc)
+    groupc.remove(team1fromgroup)
+    knockouts.append(team1fromgroup)
+    team2fromgroup = random.choice(groupc)
+    groupc.remove(team2fromgroup)
+    knockouts.append(team2fromgroup)
+    print ('')
+    print (('From Group C, ') + (team1fromgroup) + ' and ' + (team2fromgroup) + (' have qualified for the round of 16'))
+    print ('')
+    team1fromgroup = random.choice(groupd)
+    groupd.remove(team1fromgroup)
+    knockouts.append(team1fromgroup)
+    team2fromgroup = random.choice(groupd)
+    groupd.remove(team2fromgroup)
+    knockouts.append(team2fromgroup)
+    print ('')
+    print (('From Group D, ') + (team1fromgroup) + ' and ' + (team2fromgroup) + (' have qualified for the round of 16'))
+    print ('')
+    team1fromgroup = random.choice(groupe)
+    groupe.remove(team1fromgroup)
+    knockouts.append(team1fromgroup)
+    team2fromgroup = random.choice(groupe)
+    groupe.remove(team2fromgroup)
+    knockouts.append(team2fromgroup)
+    print ('')
+    print (('From Group E, ') + (team1fromgroup) + ' and ' + (team2fromgroup) + (' have qualified for the round of 16'))
+    print ('')
+    team1fromgroup = random.choice(groupf)
+    groupf.remove(team1fromgroup)
+    knockouts.append(team1fromgroup)
+    team2fromgroup = random.choice(groupf)
+    groupf.remove(team2fromgroup)
+    knockouts.append(team2fromgroup)
+    print ('')
+    print (('From Group F, ') + (team1fromgroup) + ' and ' + (team2fromgroup) + (' have qualified for the round of 16'))
+    print ('')
+    team1fromgroup = random.choice(groupg)
+    groupg.remove(team1fromgroup)
+    knockouts.append(team1fromgroup)
+    team2fromgroup = random.choice(groupg)
+    groupg.remove(team2fromgroup)
+    knockouts.append(team2fromgroup)
+    print ('')
+    print (('From Group G, ') + (team1fromgroup) + ' and ' + (team2fromgroup) + (' have qualified for the round of 16'))
+    print ('')
+    team1fromgroup = random.choice(grouph)
+    grouph.remove(team1fromgroup)
+    knockouts.append(team1fromgroup)
+    team2fromgroup = random.choice(grouph)
+    grouph.remove(team2fromgroup)
+    knockouts.append(team2fromgroup)
+    print ('')
+    print (('From Group H, ') + (team1fromgroup) + ' and ' + (team2fromgroup) + (' have qualified for the round of 16'))
+    print ('')
+    print ('Press enter to continue')
+    input('')
+    loading()
+    print ('')
+    #Here the teams split down from 16 to 2 and then there's a winner
+    # I used for loops and lists to choose a random team to win each match
+    #For the round of 16 it chooses 2 teams 8 times, then for the quarters 2 teams for 4 times, 2 teams 2 times in the semis and then 2 teams once in the final
+   
+    for i in range (1,9):
+        roundof16 = random.choice(knockouts)
+        fixtures.append(roundof16)
+        knockouts.remove(roundof16)
+        roundof16 = random.choice(knockouts)
+        fixtures.append(roundof16)
+        knockouts.remove(roundof16)
+        match = (fixtures[0],fixtures[1])
+        roundof16match.append(match)
+        score1 = random.randint (0,4)
+        score2 = random.randint (0,4)
+        team1 = fixtures [0]
+        team2 = fixtures [1]
+        if score1 > score2:
+            quarterfinal.append(team1)
+            winner = team1
+        elif score2 > score1:
+            quarterfinal.append(team2)
+            winner = team2
+        elif score1 == score2:
+            score2 = score2 + 1
+            winner = team2
+            quarterfinal.append(team2)
+        print ((str(fixtures[0])) + ' will play against ' + (str(fixtures[1])) + ' in the round of 16')
+        print ('Press enter for the result')
+        input('')
+        print ('Simulating match')
+        loading()
+        print ('')
+        print ((team1) + ' ' + (str(score1)) + ' ' + ' - '  + (str(score2)) + ' ' + (team2))
+        print ((winner) + (' are through to the quarter finals of the qatar world cup'))
+        fixtures.clear()
+        print ('')
+    for i in range (1,5):
+        thequarters = random.choice(quarterfinal)
+        fixtures.append(thequarters)
+        quarterfinal.remove(thequarters)
+        thequarters = random.choice(quarterfinal)
+        fixtures.append(thequarters)
+        quarterfinal.remove(thequarters)
+        match = (fixtures[0],fixtures[1])
+        quarterfinalmatch.append(match)
+        score1 = random.randint (0,4)
+        score2 = random.randint (0,4)
+        team1 = fixtures [0]
+        team2 = fixtures [1]
+        if score1 > score2:
+            semifinal.append(team1)
+            winner = team1
+        elif score2 > score1:
+            semifinal.append(team2)
+            winner = team2
+        elif score1 == score2:
+            score2 = score2 + 1
+            winner = team2
+            semifinal.append(team2)
+        print ((str(fixtures[0])) + ' will play against ' + (str(fixtures[1])) + ' in the quarter finals')
+        print ('Press enter for the result')
+        input('')
+        print ('Simulating match')
+        loading()
+        print ('')
+        print ((team1) + ' ' + (str(score1)) + ' ' + ' - '  + (str(score2)) + ' ' + (team2))
+        print ((winner) + (' are through to the semi finals of the qatar world cup'))
+        fixtures.clear()
+        print ('')
+    for i in range (1,3):
+        thesemis = random.choice(semifinal)
+        fixtures.append(thesemis)
+        semifinal.remove(thesemis)
+        thesemis = random.choice(semifinal)
+        fixtures.append(thesemis)
+        semifinal.remove(thesemis)
+        match = (fixtures[0],fixtures[1])
+        semifinalmatch.append(match)
+        score1 = random.randint (0,4)
+        score2 = random.randint (0,4)
+        team1 = fixtures [0]
+        team2 = fixtures [1]
+        if score1 > score2:
+            final.append(team1)
+            winner = team1
+        elif score2 > score1:
+            final.append(team2)
+            winner = team2
+        elif score1 == score2:
+            score2 = score2 + 1
+            winner = team2
+            final.append(team2)
+        print ((str(fixtures[0])) + ' will play against ' + (str(fixtures[1])) + ' in the semi finals')
+        print ('Press enter for the result')
+        input('')
+        print ('Simulating match')
+        loading()
+        print ('')
+        print ((team1) + ' ' + (str(score1)) + ' ' + ' - '  + (str(score2)) + ' ' + (team2))
+        print ((winner) + (' are through to the finals of the qatar world cup'))
+        fixtures.clear()
+        print ('')
+    for i in range (1,2):
+        thefinal = random.choice(final)
+        fixtures.append(thefinal)
+        final.remove(thefinal)
+        thefinal = random.choice(final)
+        fixtures.append(thefinal)
+        final.remove(thefinal)
+        match = (fixtures[0],fixtures[1])
+        finalmatch.append(match)
+        score1 = random.randint (0,4)
+        score2 = random.randint (0,4)
+        team1 = fixtures [0]
+        team2 = fixtures [1]
+        if score1 > score2:
+            final.append(team1)
+            winner = team1
+        elif score2 > score1:
+            final.append(team2)
+            winner = team2
+        elif score1 == score2:
+            score2 = score2 + 1
+            winner = team2
+            final.append(team2)
+        print ((str(fixtures[0])) + ' will play against ' + (str(fixtures[1])) + ' in the finals')
+        print ('Press enter for the result')
+        input('')
+        print ('Simulating match')
+        loading()
+        print ('')
+        print ((team1) + ' ' + (str(score1)) + ' ' + ' - '  + (str(score2)) + ' ' + (team2))
+        # Here the winner is stored in the variable winner and it lets you know who won the world cup
+        print ((winner) + (' have won the 2022 Qatar World Cup'))
+        fixtures.clear()
+       
+       
+#This is where I called the functions
+start()
+maincode()
